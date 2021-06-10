@@ -1,9 +1,5 @@
 <template>
-  <div class="about text-center">
-    <h1>Welcome {{ account.name }}</h1>
-    <img class="rounded" :src="account.picture" alt="" />
-    <p>{{ account.email }}</p>
-  </div>
+  <Pokemon v-for="p in pokemonParty" :key="p.name" :pokemon="p" />
 </template>
 
 <script>
@@ -13,7 +9,7 @@ export default {
   name: 'Account',
   setup() {
     return {
-      account: computed(() => AppState.account)
+      pokemonParty: computed(() => AppState.pokemonParty)
     }
   }
 }
