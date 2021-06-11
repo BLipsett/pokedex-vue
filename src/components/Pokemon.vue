@@ -5,6 +5,7 @@
         <b>
           {{ pokemon.name }}
         </b>
+        <img :src="pokemon.img" alt="">
       </div>
     </div>
   </div>
